@@ -530,64 +530,66 @@
         <!-- Consultation Section - Start
         ================================================== -->
         <section class="consultation_section">
-            <div class="container">
-                <div class="consultation_form bg_primary_light decoration_wrapper">
-                    <div class="section_heading text-center">
-                        <h2 class="section_heading_text mb-4">
-                            <span class="d-md-block">Получите первую бесплатную онлайн-консультацию</span>
-                        </h2>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4">
+            <form name="website" netlify>
+                <div class="container">
+                    <div class="consultation_form bg_primary_light decoration_wrapper">
+                        <div class="section_heading text-center">
+                            <h2 class="section_heading_text mb-2">
+                                <span class="d-md-block">Получите первую бесплатную онлайн-консультацию</span>
+                            </h2>
                         </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-7">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="input_name">имя</label>
-                                        <input id="input_name" class="form-control" type="text" name="name" placeholder="ваше имя">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="input_phone"> номер телефона</label>
-                                        <input id="input_phone" class="form-control" type="tel" name="phone" placeholder="ваш номер мобильного телефона">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="select_therapy">диагноз</label>
-                                        <select id="select_therapy" class="form-select" aria-label="Therapy Select Options">
-                                            <option selected>имеется ли диагноз психиатра или клинического психолога</option>
-                                            <option value="Therapy One">да</option>
-                                            <option value="Therapy Two">нет</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="input_calendar">дата рождения</label>
-                                        <input id="input_calendar" class="form-control" type="date" name="date">
-                                    </div>
-                                </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4">
                             </div>
-                            <div class="btn_wrap pb-0 text-center" >
-                                <button type="submit" class="btn btn-primary">
-                                    <span class="btn_text" data-text="записаться на консультацию">
-                      записаться на консультацию
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="input_name">имя</label>
+                                            <input id="input_name" class="form-control" required type="text" name="name" placeholder="ваше имя">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="input_phone"> номер телефона</label>
+                                            <input id="input_phone" class="form-control" type="tel" required name="phone" placeholder="ваш номер мобильного телефона">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="select_therapy">диагноз</label>
+                                            <select id="select_therapy" required class="form-select" aria-label="Therapy Select Options">
+                                                <option selected>имеется ли диагноз психиатра или клинического психолога</option>
+                                                <option value="yes">да</option>
+                                                <option value="no">нет</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="input_calendar">дата рождения</label>
+                                            <input id="input_calendar" required class="form-control" type="date" name="date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn_wrap pb-0 text-center">
+                                    <button type="submit" class="btn btn-primary">
+                      <span class="btn_text" data-text="записаться на консультацию">
+                        записаться на консультацию
                       </span>
-                                    <span class="btn_icon">
+                                        <span class="btn_icon">
                         <i class="fa-solid fa-arrow-up-right"></i>
                       </span>
-                                </button>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </section>
         <!-- Consultation Section - End
         ================================================== -->
