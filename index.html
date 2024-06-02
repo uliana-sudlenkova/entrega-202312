@@ -474,22 +474,22 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="input_name">имя</label>
-                        <input id="input_name" class="form-control" type="text" name="name" placeholder="ваше имя">
+                        <input id="input_name" class="form-control" required type="text" name="name" placeholder="ваше имя">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="input_phone"> номер телефона</label>
-                        <input id="input_phone" class="form-control" type="tel" name="phone" placeholder="ваш номер мобильного телефона">
+                        <input id="input_phone" class="form-control" type="tel" required name="phone" placeholder="ваш номер мобильного телефона">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="select_therapy">диагноз</label>
-                        <select id="select_therapy" class="form-select" aria-label="Therapy Select Options">
+                        <select id="select_therapy" required class="form-select" aria-label="Therapy Select Options">
                           <option selected>имеется ли диагноз психиатра или клинического психолога</option>
-                          <option value="Therapy One">да</option>
-                          <option value="Therapy Two">нет</option>
+                          <option value="yes">да</option>
+                          <option value="no">нет</option>
                         </select>
                       </div>
                     </div>
@@ -497,7 +497,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="input_calendar">дата рождения</label>
-                        <input id="input_calendar" class="form-control" type="date" name="date">
+                        <input id="input_calendar" required class="form-control" type="date" name="date">
                       </div>
                     </div>
                   </div>
