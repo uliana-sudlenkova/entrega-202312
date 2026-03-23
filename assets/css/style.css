@@ -3970,3 +3970,368 @@ Responsive For Mobile & Tablet Devices
 }
 /* Media Screen 375px - End
 ================================================== */
+
+
+
+/* ============================================================
+   DARK ACADEMIA × MYSTICAL MINIMALISM — THEME OVERRIDE
+   Автор: адаптация по Библии персонажа
+   Добавить в конец style.css
+   ============================================================ */
+/* === CSS ПЕРЕМЕННЫЕ === */
+:root {
+  --bg-main:        #0F1219;
+  --bg-card:        #1A1F2E;
+  --color-heading:  #C4B8A8;
+  --color-text:     #8B8691;
+  --color-accent:   #6B4C7D;
+  --color-hover:    #8A7354;
+  --color-divider:  #2A2F3D;
+}
+/* === GOOGLE FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+/* === ГЛОБАЛЬНЫЕ ОСНОВЫ === */
+body {
+  background-color: var(--bg-main) !important;
+  color: var(--color-text) !important;
+  font-family: 'Inter', 'Source Sans Pro', sans-serif !important;
+}
+/* === ТИПОГРАФИКА === */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  color: var(--color-heading) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+}
+mark {
+  background-color: transparent !important;
+  color: var(--color-heading) !important;
+  font-style: italic !important;
+  padding: 0 !important;
+}
+p, span, li, td, th {
+  color: var(--color-text) !important;
+}
+/* === ХЕДЕР === */
+.site_header {
+  background-color: var(--bg-main) !important;
+  border-bottom: 1px solid var(--color-divider) !important;
+}
+.site_logo img {
+  filter: brightness(0) invert(1) sepia(0.2) saturate(0.3) brightness(0.85) !important;
+}
+.main_menu {
+  background-color: var(--bg-main) !important;
+}
+.main_menu .navbar-nav .nav-link {
+  color: var(--color-text) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+.main_menu .navbar-nav .nav-link:hover,
+.main_menu .navbar-nav .nav-link.active {
+  color: var(--color-heading) !important;
+}
+.navbar-toggler {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--color-divider) !important;
+  color: var(--color-heading) !important;
+}
+.btn_hotline {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--color-divider) !important;
+  color: var(--color-text) !important;
+}
+.btn_hotline .btn_icon {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-heading) !important;
+}
+/* === СЕКЦИИ === */
+section,
+.hero_section,
+.service_section,
+.pricing_section,
+.blog_section,
+.faq_section,
+.contact_section,
+.section_space_lg {
+  background-color: var(--bg-main) !important;
+}
+.about_section,
+.consultation_section,
+.bg_primary_light,
+.section_space_lg.bg_primary_light {
+  background-color: var(--bg-card) !important;
+}
+/* === ЗАГОЛОВКИ СЕКЦИЙ === */
+.section_heading_text {
+  color: var(--color-heading) !important;
+  font-family: 'Playfair Display', serif !important;
+}
+.section_heading_description {
+  color: var(--color-text) !important;
+  font-family: 'Inter', sans-serif !important;
+}
+/* === КНОПКИ === */
+.btn {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  border-radius: 3px !important;
+  transition: all 0.3s ease !important;
+}
+.btn.btn-primary {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-heading) !important;
+  box-shadow: 0 2px 15px rgba(107, 76, 125, 0.4) !important;
+}
+.btn.btn-primary:hover {
+  background-color: var(--color-hover) !important;
+  border-color: var(--color-hover) !important;
+  box-shadow: 0 4px 20px rgba(138, 115, 84, 0.4) !important;
+}
+.btn.btn-outline-primary,
+.btn.btn-outline-secondary {
+  background-color: transparent !important;
+  border: 1px solid var(--color-accent) !important;
+  color: var(--color-accent) !important;
+}
+.btn.btn-outline-primary:hover,
+.btn.btn-outline-secondary:hover {
+  background-color: var(--color-hover) !important;
+  border-color: var(--color-hover) !important;
+  color: var(--color-heading) !important;
+}
+.btn-link {
+  color: var(--color-accent) !important;
+}
+.btn-link:hover {
+  color: var(--color-hover) !important;
+}
+/* === КАРТОЧКИ УСЛУГ === */
+.service_item {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--color-divider) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+}
+.service_item:hover {
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 8px 40px rgba(107, 76, 125, 0.2) !important;
+  transform: translateY(-3px) !important;
+}
+.service_item .item_icon { color: var(--color-accent) !important; }
+.service_item .item_title { color: var(--color-heading) !important; font-family: 'Playfair Display', serif !important; }
+.service_item .item_contact { color: var(--color-text) !important; }
+/* === ЦЕНОВЫЕ КАРТОЧКИ === */
+.pricing_item {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--color-divider) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+}
+.pricing_item:hover {
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 8px 40px rgba(107, 76, 125, 0.2) !important;
+}
+.pricing_heading {
+  color: var(--color-heading) !important;
+  font-family: 'Playfair Display', serif !important;
+}
+.pricing_price_value {
+  color: var(--color-heading) !important;
+  font-family: 'Playfair Display', serif !important;
+}
+.pricing_price_value sub {
+  color: var(--color-text) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.8rem !important;
+}
+.pricing_item hr {
+  border-color: var(--color-divider) !important;
+}
+.badge_popular {
+  background-color: var(--color-accent) !important;
+  color: var(--color-heading) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+.pricing_toggle_btn {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--color-divider) !important;
+  border-radius: 30px !important;
+  color: var(--color-text) !important;
+  font-family: 'Inter', sans-serif !important;
+}
+.pricing_toggle_btn span.active {
+  background-color: var(--color-accent) !important;
+  color: var(--color-heading) !important;
+  border-radius: 20px !important;
+}
+.pricing_toggle_btn mark {
+  background-color: transparent !important;
+  color: var(--color-text) !important;
+}
+/* === СПИСКИ С ИКОНКАМИ === */
+.info_icon .fa-circle-check,
+.info_list .info_icon {
+  color: var(--color-accent) !important;
+}
+.info_list .info_text {
+  color: var(--color-text) !important;
+}
+.about_section .info_list .info_text {
+  color: var(--color-heading) !important;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 500 !important;
+}
+/* === ФОРМА КОНСУЛЬТАЦИИ === */
+.consultation_section label {
+  color: var(--color-text) !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+.consultation_section input,
+.consultation_section select,
+.consultation_section textarea,
+.form-control {
+  background-color: var(--bg-main) !important;
+  border: 1px solid var(--color-divider) !important;
+  color: var(--color-heading) !important;
+  border-radius: 4px !important;
+}
+.consultation_section input:focus,
+.consultation_section select:focus,
+.form-control:focus {
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 0 0 3px rgba(107, 76, 125, 0.15) !important;
+  outline: none !important;
+}
+/* === БЛОГ === */
+.blog_item {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--color-divider) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+.blog_item:hover {
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 8px 32px rgba(107, 76, 125, 0.18) !important;
+}
+.blog_content .item_title a {
+  color: var(--color-heading) !important;
+  font-family: 'Playfair Display', serif !important;
+}
+.blog_content .item_title a:hover { color: var(--color-hover) !important; }
+.post_category a {
+  color: var(--color-accent) !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+.post_meta li,
+.post_meta a { color: rgba(139, 134, 145, 0.7) !important; font-size: 0.8rem !important; }
+/* === FAQ / АККОРДЕОН === */
+.accordion-item {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--color-divider) !important;
+  border-radius: 8px !important;
+  margin-bottom: 8px !important;
+  overflow: hidden !important;
+}
+.accordion-button {
+  background-color: var(--bg-card) !important;
+  color: var(--color-heading) !important;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: var(--bg-card) !important;
+  color: var(--color-hover) !important;
+  box-shadow: none !important;
+}
+.accordion-body {
+  background-color: var(--bg-card) !important;
+  color: var(--color-text) !important;
+  font-family: 'Inter', sans-serif !important;
+  border-top: 1px solid var(--color-divider) !important;
+}
+/* === КОНТАКТЫ === */
+.contact_info_list .item_icon {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-heading) !important;
+}
+.contact_info_list .item_title {
+  color: var(--color-heading) !important;
+  font-family: 'Playfair Display', serif !important;
+}
+.contact_info_list .item_info { color: var(--color-text) !important; }
+/* === ФУТЕР === */
+.site_footer {
+  background-color: var(--bg-main) !important;
+  border-top: 1px solid var(--color-divider) !important;
+}
+.site_footer a,
+.site_footer p,
+.site_footer span,
+.site_footer .nav-link {
+  color: var(--color-text) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+.site_footer a:hover,
+.site_footer .nav-link:hover { color: var(--color-heading) !important; }
+.site_footer .site_logo img {
+  filter: brightness(0) invert(1) sepia(0.2) saturate(0.3) brightness(0.85) !important;
+}
+/* === СОЦИАЛЬНЫЕ ИКОНКИ === */
+.social_links .btn_hotline {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--color-divider) !important;
+  color: var(--color-text) !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+}
+.social_links .btn_hotline:hover {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-heading) !important;
+}
+/* === РАЗДЕЛИТЕЛИ === */
+hr, .divider {
+  border-color: var(--color-divider) !important;
+  opacity: 1 !important;
+}
+/* === ТЕКСТОВЫЕ УТИЛИТЫ === */
+.text-primary { color: var(--color-accent) !important; }
+.bg-primary    { background-color: var(--color-accent) !important; }
+/* === КНОПКА «ВВЕРХ» === */
+.back_to_top, .go-top, [class*="scroll_top"] {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-heading) !important;
+}
+/* === СКРОЛЛБАР === */
+::-webkit-scrollbar { width: 6px !important; }
+::-webkit-scrollbar-track { background: var(--bg-main) !important; }
+::-webkit-scrollbar-thumb { background: var(--color-divider) !important; border-radius: 3px !important; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent) !important; }
+/* === ВЫДЕЛЕНИЕ ТЕКСТА === */
+::selection {
+  background-color: rgba(107, 76, 125, 0.35) !important;
+  color: var(--color-heading) !important;
+}
