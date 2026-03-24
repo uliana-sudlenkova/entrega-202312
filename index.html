@@ -440,14 +440,11 @@
                     </li>
                   </ul>
                   <div class="btn_wrap pb-0 text-center">
-                    <a class="btn btn-outline-primary" href="contact.html">
-                      <span class="btn_text" data-text="Приобрести">
-                        Приобрести
-                      </span>
-                      <span class="btn_icon">
-                        <i class="fa-solid fa-arrow-up-right"></i>
-                      </span>
-                    </a>
+                   <a class="btn btn-outline-primary" href="#"
+   onclick="buyPackage('price_1TEcOeH7xk5HvMq69o8HrGg2'); return false;">
+  <span class="btn_text">Приобрести</span>
+  <span class="btn_icon"><i class="fa-solid fa-arrow-up-right"></i></span>
+</a>
                   </div>
                 </div>
               </div>
@@ -487,14 +484,11 @@
                     </li>
                   </ul>
                   <div class="btn_wrap pb-0 text-center">
-                    <a class="btn btn-primary" href="contact.html">
-                      <span class="btn_text" data-text="Приобрести">
-                        Приобрести
-                      </span>
-                      <span class="btn_icon">
-                        <i class="fa-solid fa-arrow-up-right"></i>
-                      </span>
-                    </a>
+                    <a class="btn btn-primary" href="#"
+   onclick="buyPackage('price_1TEcPqH7xk5HvMq6EjzRyvwV'); return false;">
+  <span class="btn_text">Приобрести</span>
+  <span class="btn_icon"><i class="fa-solid fa-arrow-up-right"></i></span>
+</a>
                   </div>
                 </div>
               </div>
@@ -533,14 +527,11 @@
                     </li>
                   </ul>
                   <div class="btn_wrap pb-0 text-center">
-                    <a class="btn btn-outline-primary" href="contact.html">
-                      <span class="btn_text" data-text="Приобрести">
-                        Приобрести
-                      </span>
-                      <span class="btn_icon">
-                        <i class="fa-solid fa-arrow-up-right"></i>
-                      </span>
-                    </a>
+                   <a class="btn btn-outline-primary" href="#"
+   onclick="buyPackage('price_1TEcR0H7xk5HvMq6p7au7CqP'); return false;">
+  <span class="btn_text">Приобрести</span>
+  <span class="btn_icon"><i class="fa-solid fa-arrow-up-right"></i></span>
+</a>
                   </div>
                 </div>
               </div>
@@ -1019,6 +1010,31 @@
 
     <!-- Custom - Jquery Include -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+  async function buyPackage(priceId) {
+    const btn = event.currentTarget;
+    btn.style.opacity = '0.7';
+    btn.style.pointerEvents = 'none';
+
+    try {
+      const res = await fetch('/.netlify/functions/create-checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ priceId }),
+      });
+
+      if (!res.ok) throw new Error('Ошибка сервера');
+      const { url } = await res.json();
+      window.location.href = url;
+
+    } catch (e) {
+      alert('Что-то пошло не так. Попробуйте ещё раз.');
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+    }
+  }
+</script>
 
   </body>
 </html>
