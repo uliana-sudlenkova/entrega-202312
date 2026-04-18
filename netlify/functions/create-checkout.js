@@ -6,7 +6,7 @@ exports.handler = async (event) => {
   }
 
   try {
-    const { priceId } = JSON.parse(event.body);
+    const { priceId } = JSON.parse(event.body || '{}');
 
     const ALLOWED_PRICES = [
       process.env.PRICE_4_SESSIONS,
@@ -31,10 +31,11 @@ exports.handler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ url: session.url }),
     };
-  } catch (err) {
+  } catch {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: err.message }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ error: 'Payment service unavailable. Please try again.' }),
     };
   }
 };
