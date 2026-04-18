@@ -1,0 +1,164 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(*)",
+      "Write(*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git status*)",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(netlify dev)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:stripe.com)",
+      "WebFetch(domain:docs.stripe.com)",
+      "WebFetch(domain:docs.netlify.com)"
+    ],
+    "deny": [
+      "Bash(git push --force*)",
+      "Bash(git reset --hard*)",
+      "Bash(rm -rf*)"
+    ],
+    "ask": [
+      "Bash(git push*)",
+      "Bash(npm *)",
+      "Bash(netlify deploy*)",
+      "Bash(rm *)",
+      "Bash(rmdir *)",
+      "Bash(kill *)",
+      "Bash(killall *)"
+    ]
+  },
+  "outputStyle": "Explanatory",
+  "plansDirectory": ".claude/plans",
+  "attribution": {
+    "commit": "Co-Authored-By: Claude <noreply@anthropic.com>",
+    "pr": "Generated with [Claude Code](https://claude.ai/code)"
+  },
+  "respectGitignore": true,
+  "env": {
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "80"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "async": true,
+            "statusMessage": "Checking..."
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "async": true,
+            "statusMessage": "Logging failure..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "async": true,
+            "statusMessage": "Done"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "async": true,
+            "statusMessage": "Subagent done"
+          }
+        ]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "async": true,
+            "statusMessage": "Task completed"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "async": true,
+            "once": true,
+            "statusMessage": "Session started"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "async": true,
+            "once": true,
+            "statusMessage": "Session ended"
+          }
+        ]
+      }
+    ],
+    "PermissionDenied": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "async": true,
+            "statusMessage": "Permission denied"
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "async": true,
+            "statusMessage": "Stop failure"
+          }
+        ]
+      }
+    ]
+  }
+}
